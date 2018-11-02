@@ -11,25 +11,25 @@ enum islemler
 	KC=3,
 	FO=4
 };
-int maksMusteri=-1;	//Enqueda çalışacak olan kuyruktaki maksimum bekleyen müşteri sayısını tutacak değişken.
+int maksMusteri=-1;	//Enqueda Ã§alÃ½Ã¾acak olan kuyruktaki maksimum bekleyen mÃ¼Ã¾teri sayÃ½sÃ½nÃ½ tutacak deÃ°iÃ¾ken.
 int	kuyrukSayac=0;  //Enqueda 1 artacak dequeda 1 azalacak olan sayac.
 typedef enum islemler islem;
 
 struct atm
 {
-	int aSuresi;			//Atm'nin hizmet süresi.
-	int mSayisi;			//Toplam müşteri sayısı.
-	int atmKontrol;		//Atm'de önceden müşteri olup olmadığını kontrol etmek için.
+	int aSuresi;			//Atm'nin hizmet sÃ¼resi.
+	int mSayisi;			//Toplam mÃ¼Ã¾teri sayÃ½sÃ½.
+	int atmKontrol;		//Atm'de Ã¶nceden mÃ¼Ã¾teri olup olmadÃ½Ã°Ã½nÃ½ kontrol etmek iÃ§in.
 	int sonMusteri;
 };
 typedef struct atm atm;
 
 struct musteri
 {
-	int no;//Müşteri numarası.
-	int iSuresi;//İşlem süresi.
-	int bSuresi;//Bekleme süresi.
-	islem isl;//İşlem tipi.	
+	int no;//MÃ¼Ã¾teri numarasÃ½.
+	int iSuresi;//ÃÃ¾lem sÃ¼resi.
+	int bSuresi;//Bekleme sÃ¼resi.
+	islem isl;//ÃÃ¾lem tipi.	
 };
 typedef struct musteri musteri;
 struct queue
@@ -121,7 +121,7 @@ int main()
 	atmDizi[1].atmKontrol=0;
 	atmDizi[2].atmKontrol=0;
 	int counter=0,i=0,j=0;
-	int current=0;	//Sayaçlarda kod karışıklıkları olmaması için 'current' isimli farklı bir değişken tanımladım
+	int current=0;	//SayaÃ§larda kod karÃ½Ã¾Ã½klÃ½klarÃ½ olmamasÃ½ iÃ§in 'current' isimli farklÃ½ bir deÃ°iÃ¾ken tanÃ½mladÃ½m
 	int dakika;
 
 	int temp;
@@ -130,7 +130,7 @@ int main()
 	srand(time(NULL));
 	
 
-	//Artık simülasyon boyunca gelecek olan müşterilerin geliş dakikaları belli ve sıralı.
+	//ArtÃ½k simÃ¼lasyon boyunca gelecek olan mÃ¼Ã¾terilerin geliÃ¾ dakikalarÃ½ belli ve sÃ½ralÃ½.
 	current=1;
 	i=1;
 	musteri	employee;
@@ -223,9 +223,7 @@ int main()
 		employee.bSuresi++;
 		
 	}			printf("\n\n***En uzun kuyruk %d kisi.\n\n***Sirada en cok bekleyen %d nolu musteri,%d dakika.\n\n***Ortalama sirada bekleme suresi %d",maksMusteri,enuzunBMusteri,enuzunBSuresi,ortBSuresi);
-		/*Hocam ödeve geçen hafta başladım algoritmayı yanlış kurdum çok fazla hata aldım düzeltmeye çalıştım olmadı programı 2. kez yapıyorum o 
-		yüzden bu kadar geciktim.
-		*/
+	
 		return 0;
 }
 
